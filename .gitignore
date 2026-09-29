@@ -15,6 +15,7 @@ env/
 # Data and model artifacts
 data/raw/*.csv
 data/processed/*.csv
+!data/processed/selected_features.csv
 models/*.pkl
 models/*.joblib
 reports/figures/*.png
