@@ -1,6 +1,6 @@
 # Gold Price Prediction
 
-Machine learning project for predicting gold ETF price movement using the Kaggle **Gold Price Prediction Dataset**.
+Machine learning project for predicting gold ETF price movement using the Kaggle **Gold ETF Price Prediction Dataset**.
 
 ## Dataset
 
