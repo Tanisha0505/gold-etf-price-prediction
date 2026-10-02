@@ -1,4 +1,4 @@
-# Gold Price Prediction
+# Gold ETF Price Prediction
 
 Machine learning project for predicting gold ETF price movement using the Kaggle **Gold ETF Price Prediction Dataset**.
 
@@ -19,16 +19,15 @@ data/raw/FINAL_USO.csv
 
 ```text
 gold-price-prediction/
+├── app.py                  # Streamlit prediction app
 ├── data/
 │   ├── raw/                 # Original Kaggle data
 │   └── processed/           # Cleaned modeling datasets
-├── models/                  # Optional saved model artifacts
 ├── notebooks/               # EDA, model training, and evaluation
 │   ├── 01_data_loading_and_eda.ipynb
 │   └── 02_model_training_and_model_evaluation.ipynb
-├── reports/
-│   └── figures/             # Charts and evaluation plots
-└── tests/
+├── README.md
+└── requirements.txt
 ```
 
 ## Setup
@@ -38,6 +37,18 @@ python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 ```
+
+To run the notebooks, open them in Jupyter Notebook, JupyterLab, or VS Code after installing the requirements.
+
+## Run the Streamlit App
+
+After running the notebooks or placing the processed files in `data/processed/`, start the app with:
+
+```bash
+streamlit run app.py
+```
+
+The app loads `data/processed/gold_eda_data.csv` and `data/processed/selected_features.csv`, trains the final models, and allows next-day Gold ETF adjusted close prediction using the selected features.
 
 ## Goal
 
