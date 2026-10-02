@@ -258,7 +258,6 @@ st.divider()
 left_panel, right_panel = st.columns([0.9, 1.1])
 
 with left_panel:
-    st.markdown('<div class="section-card">', unsafe_allow_html=True)
     st.subheader("Live Prediction")
     st.markdown(
         '<div class="info-strip">Choose a model, edit the feature values, and the prediction updates automatically.</div>',
@@ -321,10 +320,8 @@ with left_panel:
         "<p class='small-muted'>The output is a price prediction in the same unit as the dataset's adjusted close value.</p>",
         unsafe_allow_html=True,
     )
-    st.markdown("</div>", unsafe_allow_html=True)
 
 with right_panel:
-    st.markdown('<div class="section-card">', unsafe_allow_html=True)
     st.subheader("Final Test Results")
     display_results = results_df.copy()
     for column in ["MAE", "MAE %", "RMSE", "RMSE %", "R2"]:
@@ -336,7 +333,6 @@ with right_panel:
         f"Best test model: {best_model['Model']} "
         f"(RMSE: {best_model['RMSE']:.4f}, R2: {best_model['R2']:.4f})"
     )
-    st.markdown("</div>", unsafe_allow_html=True)
 
 st.divider()
 
