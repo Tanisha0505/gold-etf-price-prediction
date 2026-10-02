@@ -12,10 +12,7 @@ env/
 # Jupyter
 .ipynb_checkpoints/
 
-# Data and model artifacts
-data/raw/*.csv
-data/processed/*.csv
-!data/processed/selected_features.csv
+# Model artifacts
 models/*.pkl
 models/*.joblib
 reports/figures/*.png
